@@ -1,0 +1,12 @@
+{
+    "IsEncrypted": false,
+    "Host": {
+        "CORS": "http://localhost:3000", 
+        "CORSCredentials": false
+    },
+    "Values": {
+        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+        "SqlConnectionString": "Server=localhost,1433;Database=PsychologistDb;User Id=sa;Password=YourStrongPassword1@;Encrypt=False;TrustServerCertificate=True"
+    }
+}

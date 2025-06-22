@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologistBooking.Domain", "PsychologistBooking.Domain\PsychologistBooking.Domain.csproj", "{261414A6-FAC1-4C85-A8E2-6D1B657D6355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologistBooking.Application", "PsychologistBooking.Application\PsychologistBooking.Application.csproj", "{38EC82CB-1FBA-49A9-A993-9D157D601E0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologistBooking.Infrastructure", "PsychologistBooking.Infrastructure\PsychologistBooking.Infrastructure.csproj", "{3B9DD74F-9F2A-4A10-AABC-4871F38B7B88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologistBooking.Functions", "PsychologistBooking.Functions\PsychologistBooking.Functions.csproj", "{CAD2DA46-FAED-41C9-B1E7-8ABFCC535551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologistBooking.Seeder", "PsychologistBooking.Seeder\PsychologistBooking.Seeder.csproj", "{6DA9FD08-D942-4FE7-86B3-49422C44D673}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologistBooking.IntegrationTests", "PsychologistBooking.IntegrationTests\PsychologistBooking.IntegrationTests.csproj", "{909C267D-0AA5-454C-993F-208C70E0F59D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{261414A6-FAC1-4C85-A8E2-6D1B657D6355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261414A6-FAC1-4C85-A8E2-6D1B657D6355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261414A6-FAC1-4C85-A8E2-6D1B657D6355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261414A6-FAC1-4C85-A8E2-6D1B657D6355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38EC82CB-1FBA-49A9-A993-9D157D601E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38EC82CB-1FBA-49A9-A993-9D157D601E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38EC82CB-1FBA-49A9-A993-9D157D601E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38EC82CB-1FBA-49A9-A993-9D157D601E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9DD74F-9F2A-4A10-AABC-4871F38B7B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9DD74F-9F2A-4A10-AABC-4871F38B7B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9DD74F-9F2A-4A10-AABC-4871F38B7B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9DD74F-9F2A-4A10-AABC-4871F38B7B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAD2DA46-FAED-41C9-B1E7-8ABFCC535551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD2DA46-FAED-41C9-B1E7-8ABFCC535551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD2DA46-FAED-41C9-B1E7-8ABFCC535551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD2DA46-FAED-41C9-B1E7-8ABFCC535551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DA9FD08-D942-4FE7-86B3-49422C44D673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DA9FD08-D942-4FE7-86B3-49422C44D673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DA9FD08-D942-4FE7-86B3-49422C44D673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DA9FD08-D942-4FE7-86B3-49422C44D673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{909C267D-0AA5-454C-993F-208C70E0F59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{909C267D-0AA5-454C-993F-208C70E0F59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{909C267D-0AA5-454C-993F-208C70E0F59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{909C267D-0AA5-454C-993F-208C70E0F59D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
