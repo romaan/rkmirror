@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {useRuntimeConfig} from '#build/imports';
 
 export interface Psychologist {
     Id: string
@@ -30,6 +31,7 @@ export function usePsychologists() {
     const pageSize = ref(10)
     const loading = ref(false)
     const error = ref<Error | null>(null)
+    const config = useRuntimeConfig()
 
     const fetchPsychologists = async (filters: PsychologistFilter = {}) => {
         try {
@@ -42,7 +44,7 @@ export function usePsychologists() {
             query.append('page', (filters.page ?? currentPage.value).toString())
             query.append('pageSize', (filters.pageSize ?? pageSize.value).toString())
 
-            const response = await axios.get<PaginatedResult<Psychologist>>(`/api/psychologists?${query.toString()}`)
+            const response = await axios.get<PaginatedResult<Psychologist>>(`${config.public.apiBase}/api/psychologists?${query.toString()}`)
 
             psychologists.value = response.data.Items
             totalCount.value = response.data.TotalCount

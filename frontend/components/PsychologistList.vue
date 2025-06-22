@@ -44,61 +44,39 @@
   </div>
 </template>
 
-
-<script lang="ts" setup>
-import { ref, watch, computed } from 'vue'
-import axios from 'axios'
-import type { Psychologist, PsychologistFilter } from '@/composables/usePsychologists'
+<script setup lang="ts">
+import { computed, watch } from 'vue'
+import type { PsychologistFilter } from '@/composables/usePsychologists'
+import { usePsychologists } from '@/composables/usePsychologists'
 import PsychologistCard from './PsychologistCard.vue'
-import { useRuntimeConfig } from '#imports'
 
 const props = defineProps<{
   filters: PsychologistFilter
 }>()
 
-const psychologists = ref<Psychologist[]>([])
-const totalCount = ref(0)
-const loading = ref(false)
-const currentPage = ref(1)
-const pageSize = ref(10)
+const {
+  psychologists,
+  totalCount,
+  currentPage,
+  pageSize,
+  loading,
+  fetchPsychologists
+} = usePsychologists()
 
-const fetchPsychologists = async () => {
-  loading.value = true
-  try {
-    const config = useRuntimeConfig()
-    const query = new URLSearchParams()
-    if (props.filters.name) query.append('name', props.filters.name)
-    if (props.filters.type) query.append('type', props.filters.type)
-    query.append('page', currentPage.value.toString())
-    query.append('pageSize', pageSize.value.toString())
-
-    const response = await axios.get(`${config.public.apiBase}/psychologists?${query.toString()}`)
-    const data = response.data
-
-    psychologists.value = data.Items
-    totalCount.value = data.TotalCount
-    currentPage.value = data.Page
-    pageSize.value = data.PageSize
-  } catch (error) {
-    console.error('Error fetching psychologists:', error)
-    psychologists.value = []
-    totalCount.value = 0
-  } finally {
-    loading.value = false
-  }
-}
-
-watch(() => props.filters, () => {
-  currentPage.value = 1
-  fetchPsychologists()
-}, { immediate: true, deep: true })
+// Fetch when filters change
+watch(
+    () => props.filters,
+    () => {
+      fetchPsychologists({ ...props.filters, page: 1 })
+    },
+    { immediate: true, deep: true }
+)
 
 const totalPages = computed(() => Math.ceil(totalCount.value / pageSize.value))
 
-const goToPage = (page: number) => {
+function goToPage(page: number) {
   if (page >= 1 && page <= totalPages.value) {
-    currentPage.value = page
-    fetchPsychologists()
+    fetchPsychologists({ ...props.filters, page })
   }
 }
 </script>

@@ -14,10 +14,10 @@ public class PsychologistApiTests : IClassFixture<FunctionTestFixture>
     public PsychologistApiTests(FunctionTestFixture fixture)
     {
         _services = fixture.Services;
-
+        // TODO: Make the base address configurable
         _client = new HttpClient
         {
-            BaseAddress = new Uri("http://localhost:7001") // Adjust if needed
+            BaseAddress = new Uri("http://localhost:7001")
         };
     }
 

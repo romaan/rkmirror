@@ -85,8 +85,5 @@ public class FunctionTestFixture : IDisposable
 
     public void Dispose()
     {
-        using var scope = Services.CreateScope();
-        var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        context.Database.EnsureDeleted();
     }
 }

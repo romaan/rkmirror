@@ -1,4 +1,7 @@
 import { ref, onMounted } from 'vue'
+import axios from 'axios';
+import {useRuntimeConfig} from '#build/imports';
+
 
 export interface FormField {
     name: string
@@ -14,12 +17,11 @@ export const usePsychologistSearchForm = () => {
         name: '',
         type: '',
     }
-
+    const config = useRuntimeConfig()
     const loadFields = async () => {
         try {
-            const res = await fetch('http://localhost:7001/api/psychologist-types')
-            const types: string[] = await res.json()
-
+            const res = await axios.get(`${config.public.apiBase}/api/psychologist-types`)
+            const types: string[] = res.data
             fields.value = [
                 {
                     name: 'name',

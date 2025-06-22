@@ -87,7 +87,7 @@ apply_migration() {
 run() {
   echo "Running Azure function"
   cd PsychologistBooking.Functions
-  func start
+  func start --port 7001
 }
 
 # Command: Test azure function endpoints
@@ -133,4 +133,3 @@ case "$1" in
     exit 1
     ;;
 esac
-

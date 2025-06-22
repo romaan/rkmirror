@@ -71,4 +71,4 @@ var psychologists = psychologistFaker.Generate(25);
 await db.Psychologists.AddRangeAsync(psychologists);
 await db.SaveChangesAsync();
 
-Console.WriteLine("✅ Seeded fake psychologist data successfully.");
+Console.WriteLine("Seeded fake psychologist data successfully.");
