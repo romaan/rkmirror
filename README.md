@@ -35,8 +35,9 @@ DB_NAME="PsychologistDb"
 EF Context: Uses AppDbContext defined in the Infrastructure project
 
 
-## 🏗 Project Structure
+## Project Structure
 
+```text
 .
 ├── frontend/                  # Nuxt 3 frontend application
 │   ├── app.vue                # Root Vue component
@@ -97,6 +98,7 @@ EF Context: Uses AppDbContext defined in the Infrastructure project
 │   ├── playwright-report/     # HTML report
 │   ├── .env                   # Environment variables for test runs
 │   └── package.json           # Test scripts and dependencies
+```
 
 # Backend
 
